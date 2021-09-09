@@ -20,19 +20,6 @@ app.get('/',function(req,res)
     
 });
 
-app.post('/',function(req,res)
-{
-    console.log(req.body)
-    var Personalitem = req.body.newItem;
-
-    if (Personalitem.length > 0)
-    {
-        items.push(Personalitem);
-        res.redirect('/');
-    }
-    
-});
-
 app.get('/work',function(req,res)
 {
     var date = new Date();
@@ -42,18 +29,30 @@ app.get('/work',function(req,res)
     res.render('work',{kindOfDay:day, workItems:workSchedule});
 });
 
-app.post('/work',function(req,res)
-{
-    console.log(req.body)
-    var workitem = req.body.newItem;
 
-    if (workitem.length > 0)
+
+app.post('/',function(req,res)
+{
+    var item = req.body.newItem;
+
+    if ('personal' === getKeyByValue(req.body,'+'))
     {
-        workSchedule.push(workitem);
+        items.push(item);
+        res.redirect('/');
+    }
+    else if('work' === getKeyByValue(req.body,'+'))
+    {
+        workSchedule.push(item);
         res.redirect('/work');
     }
     
 });
+
+function getKeyByValue(object, value) {
+    
+    return Object.keys(object).find(key => object[key] === value);
+}
+
 
 
 app.listen(3000,function()
