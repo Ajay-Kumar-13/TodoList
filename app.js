@@ -26,7 +26,7 @@ app.get('/work',function(req,res)
     var options = {weekday:"long",month:"short",day:"numeric"};
     var day = date.toLocaleDateString('en',options);
     
-    res.render('work',{kindOfDay:day, workItems:workSchedule});
+    res.render('work',{kindOfDay:'Work List', workItems:workSchedule});
 });
 
 
