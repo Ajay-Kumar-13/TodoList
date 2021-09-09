@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Work Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,400;1,700&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="box">
+        
+        <h1 class="heading"><%= kindOfDay %></h1>
+
+        <div class="list">
+            
+            <% for (var i = 0 ; i<workItems.length ; i++) { %>
+                <div class="lst">
+                    <input type="checkbox">
+                    <p class="item"><%= workItems[i] %></p>
+                </div>
+            <% } %> 
+        
+
+            <form class="form" action="/work" method="POST">
+                <input type="text" name="newItem" autocomplete="off"  placeholder="New Item">
+                <input type="submit" name = "work" value="+">
+            </form>
+           
+        </div>
+
+    </div>
+
+    
+</body>
+</html>
