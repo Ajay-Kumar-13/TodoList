@@ -1,0 +1,122 @@
+html
+{
+    height: 100%;
+}
+
+body
+{
+    text-align: center;
+    background-image:linear-gradient(to bottom right,red,blue);
+    
+}
+
+.heading
+{
+    font-family: 'Noto Serif', serif;
+    background-color: whitesmoke;
+    padding: 10px 0;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    border-radius: 5px;
+}
+
+.item
+{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2rem;
+    display: inline-block;
+    
+    
+}
+
+.lst
+{
+    border-style: none none solid none;
+    border-color: 	#C0C0C0;
+    border-width: 1px;
+
+}
+
+.list
+{
+    text-align: left;
+    margin: auto;
+    width: 150px auto;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+
+
+input[type = "checkbox"]
+{
+    margin: 20px;
+}
+
+input:checked+p
+{
+    text-decoration: line-through;
+    text-decoration-color: rgb(51, 51, 51);
+    text-decoration-thickness: 2px;
+}
+
+input[type="text"]
+{
+    padding: 20px;
+    border-style: none;
+    
+    width: 250px;
+    font-size: 1.2rem;
+    
+    background-color: whitesmoke;
+    opacity: 1;
+}
+
+input[type="text"]:focus
+{
+    outline: none;
+    
+}
+
+input[type="submit"]
+{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    font-size: 2rem;
+    margin: 10px;
+    background: linear-gradient(to bottom right, red,blue);
+    color: white;
+    /* #28313b,#485461 */
+}
+
+input[type="submit"]:hover
+{
+    background: black;
+    transition: all 1s ease;
+}
+
+.box
+{
+    margin:auto;
+    width: 400px;
+    height: 100%;
+    display: inline-block;
+}
+
+.form
+{
+    background-color: whitesmoke;
+    border-radius: 5px;
+    margin: auto;
+    padding: 10px;
+}
+
+.swap
+{
+    display: inline-block; 
+    position: absolute;
+    margin-left: 30%;
+    margin-right: 3%;
+    margin-top: 3%;
+}
