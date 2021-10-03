@@ -20,7 +20,7 @@ body
     border-radius: 5px;
 }
 
-.swap .heading
+.heading
 {
     width: 400px;
     padding: 20px 0;
@@ -33,7 +33,7 @@ body
 .item
 {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 2rem;
+    font-size: 1rem;
     display: inline-block;
     
     
@@ -90,7 +90,7 @@ input[type="text"]:focus
 
 
 
-.form input[type="submit"]
+button
 {
     border-radius: 50%;
     height: 50px;
@@ -102,10 +102,10 @@ input[type="text"]:focus
     /* #28313b,#485461 */
 }
 
-.form input[type="submit"]:hover
+button:hover
 {
     background: black;
-    transition: all 1s ease;
+    transition: all 0.5s ease;
 }
 
 .box
@@ -116,7 +116,7 @@ input[type="text"]:focus
     display: inline-block;
 }
 
-.form
+.form.item
 {
     background-color: whitesmoke;
     border-radius: 5px;
@@ -124,3 +124,4 @@ input[type="text"]:focus
     padding: 10px;
 }
 
+  

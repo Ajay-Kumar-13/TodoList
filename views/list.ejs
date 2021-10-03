@@ -6,28 +6,28 @@
 
         <div class="list">
             
-            <% for (var i = 0 ; i<listItems.length ; i++) { %>
-                <div class="lst">
-                    <input type="checkbox">
-                    <p class="item"><%= listItems[i] %></p>
-                </div>
-            <% } %> 
+            
+            <% listItems.forEach(function(singleitem) { %>
+                <form action="/delete" method="POST">
+                    <div class="lst">
+                        <input type="checkbox"  onChange="this.form.submit()" name = "checkbox" value=<%=singleitem._id%>>
+                        <p class="item"><%= singleitem.name %></p>
+                    </div>
+                    <input type="hidden" name="listname" value=<%= kindOfDay %>>
+                </form>
+            <% }) %>
         
 
             <form class="form" action="/" method="POST">
                 <input type="text" name="newItem" autocomplete="off"  placeholder="New Item">
-                <input type="submit" name = "personal" value="+">
+                <button type="submit" name="value" value= <%= kindOfDay %>>+</button>
+                
             </form>
 
             
            
         </div>
 
-        <div class="swap">
-            <form action="/work">
-                <input class = "heading" type="submit" name = "Personal" value="Move to Work List">
-            </form>
-        </div>
 
     </div>
 
